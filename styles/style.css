@@ -1,0 +1,155 @@
+:root {
+  --mainFont: "Space Mono", monospace;
+  --secondFont: "Inconsolata", monospace;
+  --otherFont: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-row: 8;
+}
+
+.header,
+.main-container,
+.footer {
+  grid-column: 1/-1;
+}
+
+.header {
+  grid-row: 1/2;
+}
+
+.header__title {
+  font-family: var(--secondFont);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 2.5rem;
+  letter-spacing: -0.08em;
+  color: #333333;
+  text-transform: uppercase;
+  padding-top: 4rem;
+  padding-left: 7.7rem;
+  margin: 0;
+}
+
+.main-container,
+.main-container__info,
+.footer {
+  display: flex;
+}
+
+.main-container {
+  grid-row: 3/6;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-container__img img {
+  min-width: 28rem;
+  max-width: 54rem;
+}
+
+.main-container__info {
+  flex-direction: column;
+  justify-self: flex-start;
+  align-items: flex-start;
+}
+
+.info__title,
+.info__description,
+.button {
+  font-family: var(--mainFont);
+  font-size: normal;
+}
+
+.info__title {
+  max-width: 58.6rem;
+  font-weight: 700;
+  font-size: 6.4rem;
+  line-height: 9.5rem;
+  letter-spacing: -0.035em;
+  color: #333333;
+  margin: 1rem 0 3.6rem 0;
+}
+
+.info__description {
+  max-width: 38rem;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.button {
+  background-color: #333333;
+  padding: 2.4rem 4.2rem;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+  color: white;
+}
+
+.footer,
+.footer a {
+  color: #BDBDBD;
+}
+
+.footer {
+  grid-row: 7/8;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer p {
+  font-family: var(--otherFont);
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  letter-spacing: 0em;
+  margin: 2.4rem 0;
+}
+
+.footer b {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .main-container__img img {
+    width: 28rem;
+  }
+
+  .header__title {
+    padding-top: 2rem;
+    padding-left: 2.4rem;
+    margin: 0;
+  }
+
+  .info__title, 
+  .info__description {
+    width: 35rem;
+  }
+
+  .info__title {
+    font-size: 4.8rem;
+    line-height: 7.1rem;
+  }
+
+  .info__description {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+  }
+
+}
